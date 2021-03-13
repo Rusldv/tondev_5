@@ -1,0 +1,72 @@
+{
+  "_from": "tondev@^0.1.7",
+  "_id": "tondev@0.1.7",
+  "_inBundle": false,
+  "_integrity": "sha512-BZ9UZC88ce2Xnr82ifu4sN37pYPsi/19MxuclOCc3NG/24rFgNx6/ZPbQsP8OkUrtPbF2A4pDrdV7wWjqMXkDw==",
+  "_location": "/tondev",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "tondev@^0.1.7",
+    "name": "tondev",
+    "escapedName": "tondev",
+    "rawSpec": "^0.1.7",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.7"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tondev/-/tondev-0.1.7.tgz",
+  "_shasum": "35f955cfa5a3615261bc39c3a8f278ba115d5ec4",
+  "_spec": "tondev@^0.1.7",
+  "_where": "/Users/michaelvlasov/projects/ton/tondev-vscode",
+  "author": {
+    "name": "TON DEV SOLUTIONS LTD."
+  },
+  "bin": {
+    "tondev": "cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/tonlabs/tondev/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "TON Dev Environment",
+  "devDependencies": {
+    "@types/node": "^12.12.6",
+    "typescript": "^4.1.3"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "homepage": "https://docs.ton.dev/",
+  "keywords": [
+    "TON",
+    "Dev",
+    "Development",
+    "FreeTON",
+    "TONOS"
+  ],
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "dist/index.js",
+  "name": "tondev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonlabs/tondev.git"
+  },
+  "scripts": {
+    "prepublish": "tsc",
+    "prepublishOnly": "npm i && tsc",
+    "tondev": "node ./cli.js"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.1.7"
+}
