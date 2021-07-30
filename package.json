@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tonclient/core": "^1.20.0",
+    "@tonclient/lib-node": "^1.20.0",
     "mkdirp": "^1.0.4"
   }
 }
