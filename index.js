@@ -139,12 +139,16 @@ switch(cmd) {
                   type: 'Tvc',
                   tvc: tvc,
                   public_key: keys.public,
-                  /*
                   init_params: {
-                     abi: abi,
-                     value: '{\"constructor:{}\"}'
+                     abi: {
+                        type: 'Json',
+                        value: abi
+                     },
+                     value: {
+                        function_name: "constructor",
+                        value: {}
+                     }
                   }
-                  */
                }
             })
             .then(acc => {
@@ -171,8 +175,8 @@ switch(cmd) {
             cli.processing.process_message({
                message_encode_params: {
                   abi: {
-                  type: 'Json',
-                  value: abi
+                     type: 'Json',
+                     value: abi
                   },
                   deploy_set: {
                      tvc: tvc
@@ -245,11 +249,21 @@ switch(cmd) {
                      type: 'Account',
                      boc: acc2,
                      unlimited_balance: true
-                  }
+                  },
+                  abi: {
+                     type: 'Json',
+                     value: abi2
+                  },
+                  return_updated_account: true
                })
                .then(res => {
                   console.log(res)
-                  exit(0)
+                  // console.log(res.account) // Возвращается новый акк
+                  // Его нужо переписать в файле аккаунта
+                  fs.writeFile(`${arg}.account.boc`, res.account, () => {
+                     console.log("Contract account RE-writen.")
+                     exit(0);
+                  })
                })
                .catch(err => {
                   console.log(err)
